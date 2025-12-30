@@ -1,20 +1,23 @@
 /* ===========================================
    BASIC PAGE SETTINGS
    =========================================== */
+
+/* Reset all elements to use box-sizing border-box
+   (makes padding and border counted inside width/height) */
 * {
     box-sizing: border-box;
 }
 
+/* Default body style for the entire page */
 body {
-    padding-top: 25%;
+    padding-top: 50%;
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #fff;
     /* white background */
     color: #333;
+    /* dark text color */
 }
-
-
 
 /* ===========================================
    HEADER SECTION STYLING
@@ -22,21 +25,23 @@ body {
 
 /* Header main container */
 header {
-    background-color: #075264;
-    
+    background-color: #00ccff;
+    /* bright orange */
     color: white;
     display: flex;
     position: fixed;
     top: 0;
     width: 100%;
     overflow: hidden;
+    /* arrange items in a row */
     align-items: center;
-    justify-content: space-around;
-    padding: 12px 20px;
+    /* center vertically */
+    justify-content: space-between;
+    /* equal space between sections */
+    padding: 100px 80spx;
     flex-wrap: wrap;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    /* wrap content on small screens */
 }
-
 .header a {
     float: left;
     display: block;
@@ -57,36 +62,43 @@ header {
     font-size: 24px;
 }
 
-
+/* Remove default list style and create horizontal navigation */
 nav ul {
     list-style: none;
+    /* no bullets */
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 25px;
+    /* horizontal layout */
+    gap: 18px;
+    /* space between links */
     align-items: center;
     flex-wrap: wrap;
 }
 
-
+/* Navigation links */
 nav ul li a {
-    color: rgb(255, 255, 255);
+    color: white;
     text-decoration: none;
+    /* remove underline */
     font-weight: bold;
     transition: opacity 0.2s;
+    /* smooth hover effect */
 }
 
+/* Hover effect for menu items */
 nav ul li a:hover {
-    opacity: 9.8;
+    opacity: 0.8;
 }
 
-
+/* Search box container */
 .search-box {
     display: flex;
     align-items: center;
     margin-top: 6px;
 }
 
+/* Search text field */
 .search-box input {
     padding: 6px 8px;
     border: none;
@@ -107,45 +119,53 @@ nav ul li a:hover {
     transition: background-color 0.2s;
 }
 
+/* Change button background when hovering */
 .search-box button:hover {
-    background-color: #140a02;
+    background-color: #ffd4b3;
 }
 
 /* ===========================================
    MAIN SECTION (HOME PAGE BACKGROUND)
    =========================================== */
 
-
+/* Add your background image at src/images/background.jpg */
 main {
     text-align: center;
-    padding: 80px 200px;
-    color: rgb(255, 255, 255);
-    background-image: url("../images/background 2.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    padding: 80px 20px;
+    color: rgb(0, 0, 0);
 
-    height: 200vh;
-     
+    /* Background image setup */
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    /* fill entire section */
+    background-position: center;
+    /* center image */
+    background-repeat: no-repeat;
+
+    height: 100vh;
+    /* section height = 80% of screen */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: first center;
+    /* center content vertically */
+    align-items: center;
+    /* center content horizontally */
 }
 
+/* Add text shadow to make text readable on image */
+main h2,
 main p {
-    text-shadow: 10px 2px 6px rgba(0, 0, 0, 0.6);
-    margin: 10px 0;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    margin: 8px 0;
 }
 
-
+/* Button inside main section ("Order Now") */
 .cta-button {
     display: inline-block;
     margin-top: 16px;
     padding: 12px 22px;
     background-color: #02eeff;
-    color: rgb(172, 58, 58);
+    color: white;
     text-decoration: none;
     font-weight: bold;
     border-radius: 6px;
@@ -153,8 +173,9 @@ main p {
     transition: transform 0.15s, box-shadow 0.15s;
 }
 
+/* Lift up button slightly when hovered */
 .cta-button:hover {
-    transform: translateY(-12px);
+    transform: translateY(-3px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
 }
 
@@ -164,35 +185,42 @@ main p {
 
 footer {
     background-color: #333;
+    /* dark gray background */
     color: white;
     padding: 30px 20px;
+    /* margin-top: 30px; */
 
 
-
+    /* Layout of footer columns */
     .footer-content {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        gap: 60px;
+        /* wrap on smaller screens */
+        gap: 30px;
         margin-left: 40px;
     }
 
+    /* Each section inside footer (About, Links, Contact) */
     .footer-content>div {
         flex: 2;
         min-width: 220px;
 
     }
 
+    /* Footer headings color */
     .footer-content h3 {
         color: #ff6600;
         margin-top: 0;
     }
 
+    /* Footer text */
     .footer-content p {
-        font-size: 20px;
+        font-size: 14px;
         line-height: 1.5;
     }
 
+    /* Remove list bullets in footer links */
     .footer-content ul {
         list-style: none;
         padding: 0;
@@ -200,25 +228,24 @@ footer {
 
     }
 
+    /* Space between footer links */
     .footer-content ul li {
         margin: 6px 0;
     }
 
+    /* Footer link styles */
     .footer-content ul li a {
         color: white;
         text-decoration: none;
-        text-align: center;
-        
         transition: color 0.3s;
     }
 
-
+    /* Hover color change */
     .footer-content ul li a:hover {
-        color: #0bc6f5;
-        text-align: center;
-        transform: scale(110%);
+        color: #ff6600;
     }
 
+    /* Small text at the bottom of footer */
     .footer-bottom {
         text-align: center;
         border-top: 1px solid #555;
@@ -230,31 +257,37 @@ footer {
     /* ===========================================
    RESPONSIVE DESIGN (FOR MOBILE)
    =========================================== */
+
+    /* Apply these styles when screen width ≤ 768px */
     @media (max-width: 768px) {
 
-       
+        /* Make header items vertical */
         header {
             flex-direction: column;
             align-items: flex-start;
         }
 
-
+        /* Stack nav items vertically */
         nav ul {
             flex-direction: column;
             gap: 8px;
             margin-top: 8px;
         }
 
-
+        /* Make search bar full width on mobile */
         .search-box {
             width: 100%;
             margin-top: 12px;
         }
 
+        /* Reduce height and padding for smaller screens */
         main {
             height: 60vh;
             padding: 40px 16px;
         }
 
+        /* Stack footer sections vertically */
         .footer-content {
-            flex-direction: column;}
+            flex-direction: column;
+        }
+    }
