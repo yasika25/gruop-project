@@ -1,0 +1,105 @@
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Lanka Places</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="src/css/visiting index.css">
+    
+</head>
+<body>
+    <header class="hero">
+            <h1 class="visiting-title">Dream <span class="clrchange"> Destinations</span></h1>
+            <p>Expolre the most beatiful places in Sri Lanka</p>
+            <a href="places.html" class="btn">Explore Places</a>
+    </header>
+
+    <h2>Sri Lanka <span class="clrchange1"> Beautiful Places</span></h2>
+
+    <div class="grid">
+
+        <div class="item" onclick="showDetails( 'Sigiriya', ' Dambulla', 'Sigiriya is a UNESCO world Heritage Site known for its places ruins, frescose and Lion Paw entrance.', 'LKR 3500', 'places/sigiriya-rock-fortress.jpg')">
+            <img src="places/sigiriya-rock-fortress.jpg">
+            <h3>Sigiriya</h3>
+        </div>
+
+        <div class="item" onclick="showDetails('Nine Arch Bridge', 'Ella', 'Popular for tea estates,hill views and the iconic Nine Arch Bridge.', 'FREE', 'places/Nine-Arch-Bridge-Ella-1200x630-1.jpg')">
+            <img src="places/Nine-Arch-Bridge-Ella-1200x630-1.jpg">
+            <h3>Nine Arch Bridge</h3>
+        </div>
+
+        <div class="item" onclick="showDetails('Temple of Tooth', 'Kandy', 'Famous Buddhist temple.', 'LKR 1500', 'places/temple-of-the-sacred-tooth-relic-kandy.jpg')">
+            <img src="places/temple-of-the-sacred-tooth-relic-kandy.jpg">
+            <h3>Temple of Tooth</h3>
+        </div>
+
+        <div class="item" onclick="showDetails('NuwaraEliya Lake', 'NuwaraEliya ', 'A serene,picturesque lake surrounded by lush greenery,perfect for boating and peaceful strolls.', 'LKR 500', 'places/lake-gregory-park-sri-lanka.webp')">
+            <img src="places/lake-gregory-park-sri-lanka.webp">
+            <h3>NuwaraEliya</h3>
+        </div>
+
+        <div class="item" onclick="showDetails('Mirissa beach', 'Matara', 'Popular surfing beach.', 'FREE', 'places/Mirissa-Sri-Lanka4.jpg')">
+            <img src="places/Mirissa-Sri-Lanka4.jpg">
+            <h3>Mirissa Beach</h3>
+        </div>
+
+        <div class="item" onclick="showDetails('Horton Plains', 'Nuwara Eliya', 'Worlds End viewpoint.', 'LKR 4500', 'places/Horton-Plains-Nature-Reserve-1200x630-1.jpg')">
+            <img src="places/Horton-Plains-Nature-Reserve-1200x630-1.jpg">
+            <h3>Horton Plains</h3>
+        </div>
+        <div class="item" onclick="showDetails('Jetavanaramaya stupa', 'Anuradhapura', 'Jetavanaramaya is an ancient massive Buddhist stupa in Anuradhapura,known for being one of the tallest brick structures in the world.', 'LKR 450', 'places/anuradhapura.jpg')">
+            <img src="places/anuradhapura.jpg">
+            <h3>Horton Plains</h3>
+        </div>
+        <div class="item" onclick="showDetails('Jaffna Fort', 'Jaffna', 'Jaffna Fort is a historic coastal fortress built by the Portuguse,later expanded by the Dutch,showcasing Sri Lankas colonial heritage.', 'LKR 50 ', 'places/wp-1710427169107210442550145199996.jpg')">
+            <img src="places/wp-1710427169107210442550145199996.jpg">
+            <h3>Horton Plains</h3>
+        </div>
+        <div class="item" onclick="showDetails('Thirukoneswaram Temple', 'Trincomalee', 'An ancient cliff-top Hindu temple overlooking the Indian Ocean.', 'Free', 'places/visit-thirukoneswaram-temple.webp')">
+            <img src="places/visit-thirukoneswaram-temple.webp">
+            <h3>Horton Plains</h3>
+        </div>
+
+
+
+    </div>
+
+    <!-- POPUP -->
+    <div class="popup" id="popup">
+        <div class="popup-box">
+
+            <button class="close-btn" onclick="closePopup()">X</button>
+
+            <img id="p-img" class="popup-img">
+
+            <h2 id="p-title"></h2>
+            <p><b>Location:</b> <span id="p-location"></span></p>
+            <p><b>Description:</b> <span id="p-desc"></span></p>
+
+            <p class="price-box">
+                <b>Price:</b> <span id="p-price"></span>
+            </p>
+
+        </div>
+    </div>
+
+    <script>
+        function showDetails(title, location, desc, price, image) {
+            document.getElementById("p-title").innerText = title;
+            document.getElementById("p-location").innerText = location;
+            document.getElementById("p-desc").innerText = desc;
+            document.getElementById("p-price").innerText = price;
+            document.getElementById("p-img").src = image;
+
+            document.getElementById("popup").style.display = "flex";
+        }
+
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>

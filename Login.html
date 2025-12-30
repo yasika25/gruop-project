@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  
+  <link rel="stylesheet" href="src/css/login-style.css">
+  <link rel="stylesheet" href="yasi.html">
+</head>
+<body> 
+
+  <div class="login-container">
+     <p class="login-tagline">MEMO ENTERTAINMENT</p>
+
+    <form id="loginForm" class="login-form">
+      <h2>LOGIN</h2>
+
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+      <button type="submit" class="login-button">LOGIN</button>
+
+      <p id="message"></p>
+
+      <p class="form-links">
+        <a href="forgot-password.html">Forgot Password?</a> |
+        <a href="register.html">Create</a>
+      </p>
+    </form>
+
+  </div>
+  
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // STOP page from going to another window
+
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        const messageDiv = document.getElementById('message');
+
+        // Just sample login check
+        if (username === 'arjun' && password === '1234') {
+            messageDiv.textContent = 'Login successful!';
+            messageDiv.style.color = 'green';
+        } else {
+            messageDiv.textContent = 'Invalid username or password.';
+            messageDiv.style.color = 'red';
+        }
+    });
+  </script>
+
+</body>
+</html>

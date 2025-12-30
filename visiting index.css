@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box ;
+}
+.body{
+    background: #ffffff;
+}
+.hero{
+   height: 90vh;
+   background-color: #ffffff;
+   background: url(places/800x750-1.jpg) center/cover no-repeat;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-shadow: 0 0 10px black;
+   color: rgb(255, 255, 255);
+   padding-left: 12px 20px;
+   text-align: center;
+   float: left;
+   margin-top: 20px;
+   margin-bottom: 30px;
+ 
+}
+div {
+  border: 1px solid green;
+  padding: 10px;
+}
+.visiting-title{
+   font-family: 'brush script mt'cursive; 
+   font-size: 60px;
+   font-weight: bold;
+   align-items: center;
+   margin-bottom: 100px;
+}
+.hero{
+   font-size: 18px;
+}
+.clrchange{
+   color: rgb(255, 255, 255); 
+}
+.btn{
+   text-decoration: none;
+   background: #854784;
+   padding: 12px 25px ;
+   color:rgb(255, 255, 255) ;
+   border-radius: 8px;
+   margin-top:20px;
+   font-weight: bold;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ca67c8;
+    margin-top: 20px;
+}
+.clrchange1{
+   color: rgb(8, 8, 8);
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.item {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.item:hover {
+    transform: scale(1.03);
+}
+.item h3{
+   color: #854784;
+   text-align: center;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.item img {
+    width: 100%;
+    height: 130px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* POPUP */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-box {
+    background: white;
+    width: 70%;
+    padding: 20px;
+    border-radius: 10px;
+    animation: pop 0.3s ease-in-out;
+}
+
+@keyframes pop {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.close-btn {
+    background: rgb(214, 106, 236);
+    color: rgb(255, 255, 255);
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    float: right;
+}
+
+/* Popup image */
+.popup-img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* Price box */
+.price-box {
+    background: #ffeaa7;
+    padding: 10px;
+    width: fit-content;
+    border-radius: 8px;
+    font-size: 18px;
+}
